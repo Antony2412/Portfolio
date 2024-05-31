@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antony Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5e6764d27e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-circle-xmark"onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+               
+                <h1>Hi,I'm <span>Antony</span> Joy</h1>
+                <p>JAVA Programmer</p>
+            </div>
+        </div>
+    </div>
+    <!-------------about---------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="about.png ">
+                </div>                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a JAVA programmer and  passionate developer with a love for creating innovative web applications. My journey in the world of programming began several years ago, and I've since honed my skills in HTML, CSS, JavaScript, and various web frameworks.</p>
+                    <br>
+                    <p>In my free time, I enjoy working on personal projects, exploring new technologies like AI and DeepLearning.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('project')">Projects</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>JAVA</span><br>Core JAVA, OOPs and DSA in Java.</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript.</li>
+                            <li><span>AI-ML</span><br>Python, Sql and DeepLearning concepts like RNN, CNN, GANs.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="project">
+                        <ul>
+                            <li><span>Rock_Paper_Scissors</span><br> A rock paper scissors game using HTML,CSS and JavaScript
+                                <a href="https://antony2412.github.io/Rock_Paper_Scissors/" class="btn">View Project</a>
+                            </li>
+                            <li><span>Dice Game</span><br> A Dice game using HTML,CSS and JavaScript.
+                                <a href="https://antony2412.github.io/Dice_Game/" class="btn">View Project</a>
+                            </li>
+                            <li><span>Traffic-Signal-Classification</span><br>A traffic sign classification model was developed using the CNN architecture with 
+                                an accuracy of up to 93.4%.
+                                <a href="https://github.com/Antony2412/Traffic-Signal-Classification-" class="btn">View Project</a>
+                            </li>
+                            <li><span>Face-Emotion-Detection</span><br>Developed a CNN model that was able to do  FER with 72% accuracy
+                                <a href="https://github.com/Antony2412/Face-Emotion-Detection" class="btn">View Project</a>
+                            </li>
+                            <li><span>Tomato-Leaf-Disease-Classification-using-CNN</span><br>CNN model that detects the type of disease in tomato leaves with 98% accuracy.
+                                <a href="https://github.com/Antony2412/Tomato-Leaf-Disease-Classification-using-CNN" class="btn">View Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>NIT Calicut</span><br>Electronics and Communiction Department : CGPA 7.97</li>
+                            <li><span>St Patricks Academy Angamaly</span><br>ICSE : 92.75 %</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- -----------------contact-------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> antonyjoy2412@gamil.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 9946569538</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/antony-joy/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Antony2412"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/antonyjoy2412/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://leetcode.com/u/antony_2412/"><i class="fa-solid fa-code"></i></a>
+
+                    </div>
+                    <a href="https://drive.google.com/file/d/1ACML4D3fQszWDqaLOJHYtUC9rZrMhm34/view?usp=sharing" download class="btn btn2 "> Download CV</a>                   
+
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+              
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemeu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right="0";
+        }
+        function closemenu(){
+            sidemeu.style.right="-200px";
+        }
+
+
+
+    </script>
+</body>
+</html>
